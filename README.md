@@ -1,10 +1,7 @@
-<h2 align="center">Cook blog</h2>
+
+# Cook blog
 
 
-**Ссылки**:
-- [Telegram чат](https://t.me/trueDjangoChannel)
-- [Telegram канал](https://t.me/django_school)
-- [YouTube](https://www.youtube.com/channel/UC_hPYclmFCIENpMUHpPY8FQ?view_as=subscriber)
 
 ### Описание проекта:
 Блог шеф-повара с рецептами
@@ -67,7 +64,7 @@ Windows
 
 [MIT License](https://docsopensource.github.io/docs/License/7.7_MIT_License)
 
-Copyright (c) 2023-present, GrafanyS Андрей Валетов · he/him
+Copyright (&copy;) 2023-present, GrafanyS Андрей Валетов · he/him
 
 
 
