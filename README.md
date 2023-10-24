@@ -1,5 +1,5 @@
+<h2 align="center">Cook blog</h2>
 
-# Cook blog
 
 
 
@@ -64,7 +64,7 @@ Windows
 
 [MIT License](https://docsopensource.github.io/docs/License/7.7_MIT_License)
 
-Copyright (&copy;) 2023-present, GrafanyS Андрей Валетов · he/him
+Copyright (c) 2023-present, GrafanyS Андрей Валетов · he/him
 
 
 
