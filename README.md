@@ -13,8 +13,8 @@
 ### Инструменты разработки
 
 **Стек:**
-- Python >= 3.9
-- Django == 3.2.4
+- Python >= 3.12
+- Django==4.2.6
 - sqlite3
 
 ## Разработка
@@ -23,7 +23,7 @@
 
 ##### 2) Клонировать репозиторий
 
-    git clone https://github.com/DJWOMS/cook_blog.git
+    git clone https://github.com/GrafanyS/cook_blog.git
 
 ##### 3) Создать виртуальное окружение
 
@@ -41,7 +41,7 @@ Windows
 
     ./venv/Scripts/activate
 
-##### 5) Устанавливить зависимости:
+##### 5) Устанавливать зависимости:
 
     pip install -r req.txt
 
@@ -65,9 +65,9 @@ Windows
 
 ## License
 
-[BSD 3-Clause License](https://opensource.org/licenses/BSD-3-Clause)
+[MIT License](https://docsopensource.github.io/docs/License/7.7_MIT_License)
 
-Copyright (c) 2021-present, DJWOMS - Omelchenko Michael
+Copyright (c) 2023-present, GrafanyS Андрей Валетов · he/him
 
 
 
