@@ -16,13 +16,13 @@
           margin-right: 8px;
       }
   
-      .header__menu ul li:hover .header__megamenu__wrapper {
+      .header__menu ul li:hover .header__mega_menu__wrapper {
           top: 42px;
           opacity: 1;
           visibility: visible;
       }
 
-      .header__megamenu__wrapper {
+      .header__mega_menu__wrapper {
           max-width: 950px;
       }
 
@@ -38,7 +38,7 @@
   /* Tablet Device = 768px */
   @media only screen and (min-width: 768px) and (max-width: 991px) {
   
-      .header__megamenu__wrapper {
+      .header__mega_menu__wrapper {
           max-width: 730px;
       }
   
@@ -50,7 +50,7 @@
         height: 330px;
       }
 
-      .sidebar__item__follow__links a, .humberger__menu__about .humberger__menu__about__social a {
+      .sidebar__item__follow__links a, .hamburger__menu__about .hamburger__menu__about__social a {
           margin-bottom: 10px;
       }
       
@@ -115,7 +115,7 @@
           display: none;
       }
   
-      .header__humberger {
+      .header__hamburger {
           text-align: center;
           padding: 10px 0 5px;
       }
@@ -190,7 +190,7 @@
   
   /* Small Device = 320px */
   @media only screen and (max-width: 479px) {
-      .humberger__menu__wrapper {
+      .hamburger__menu__wrapper {
           width: 300px;
           padding: 50px 30px 60px 30px;
       }
@@ -200,7 +200,7 @@
           margin-bottom: 10px;
       }
   
-      .sidebar__item__follow__links a, .humberger__menu__about .humberger__menu__about__social a {
+      .sidebar__item__follow__links a, .hamburger__menu__about .hamburger__menu__about__social a {
           margin-bottom: 10px;
       }
   

@@ -1,6 +1,6 @@
 /*  ---------------------------------------------------
-    Template Name: Foodeiblog
-    Description:  Foodeiblog Blog HTML Template
+    Template Name: Food_blog
+    Description:  Food_blog Blog HTML Template
     Author: Colorlib
     Author URI: https://colorlib.com
     Version: 1.0
@@ -27,15 +27,15 @@
         $(this).css('background-image', 'url(' + bg + ')');
     });
 
-    //Humberger Menu
-    $(".humberger__open").on('click', function () {
-        $(".humberger__menu__wrapper").addClass("show__humberger__menu__wrapper");
-        $(".humberger__menu__overlay").addClass("active");
+    //Hamburger Menu
+    $(".hamburger__open").on('click', function () {
+        $(".hamburger__menu__wrapper").addClass("show__hamburger__menu__wrapper");
+        $(".hamburger__menu__overlay").addClass("active");
     });
 
-    $(".humberger__menu__overlay").on('click', function () {
-        $(".humberger__menu__wrapper").removeClass("show__humberger__menu__wrapper");
-        $(".humberger__menu__overlay").removeClass("active");
+    $(".hamburger__menu__overlay").on('click', function () {
+        $(".hamburger__menu__wrapper").removeClass("show__hamburger__menu__wrapper");
+        $(".hamburger__menu__overlay").removeClass("active");
     });
 
     //Search Switch

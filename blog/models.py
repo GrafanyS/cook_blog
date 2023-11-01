@@ -68,6 +68,7 @@ class Recipe(models.Model):
     cook_time = models.PositiveIntegerField(default=0)
     ingredients = RichTextField()
     directions = RichTextField()
+    # create_at = models.DateTimeField(default=timezone.now)
     post = models.ForeignKey(
         Post,
         related_name="recipes",
@@ -75,6 +76,13 @@ class Recipe(models.Model):
         null=True,
         blank=True
     )
+    slug = models.SlugField(max_length=200, unique=True)
+
+    def get_absolute_url(self):
+        return reverse("recipes", kwargs={"slug": self.post.slug})
+
+    def get_recipes(self):
+        return self.recipes.all()
 
 
 class Comment(models.Model):

@@ -9,6 +9,18 @@ class RecipeInline(admin.StackedInline):
     extra = 1
 
 
+@admin.register(models.Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ["name", ]
+    prepopulated_fields = {'slug': ('name',), }
+
+
+@admin.register(models.Tag)
+class TagAdmin(admin.ModelAdmin):
+    list_display = ["name", ]
+    prepopulated_fields = {'slug': ('name',), }
+
+
 @admin.register(models.Post)
 class PostAdmin(admin.ModelAdmin):
     list_display = ["title", "category", "author", "create_at", "id"]
@@ -21,6 +33,7 @@ class PostAdmin(admin.ModelAdmin):
 @admin.register(models.Recipe)
 class RecipeAdmin(admin.ModelAdmin):
     list_display = ["name", "prep_time", "cook_time", "post"]
+    prepopulated_fields = {'slug': ('name',), }
 
 
 @admin.register(models.Comment)
@@ -28,5 +41,5 @@ class CommentAdmin(admin.ModelAdmin):
     list_display = ['name', 'email', 'website', 'create_at', 'id']
 
 
-admin.site.register(models.Category, MPTTModelAdmin)
-admin.site.register(models.Tag)
+# admin.site.register(models.Category, MPTTModelAdmin)
+# admin.site.register(models.Tag)
