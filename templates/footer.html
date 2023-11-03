@@ -49,7 +49,7 @@
           <div class="footer__social">
               {% get_social_links as social_links %}
               {% for item in social_links %}
-                <a href="{{ item.link }}"><img src="{{ item.icon.url }}"></a>
+                <a href="{{ item.link }}"><img src="{{ item.icon.url }}" alt=""></a>
               {% endfor %}
           </div>
         </div>
