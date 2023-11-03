@@ -1,54 +1,22 @@
 {% extends 'base.html' %}
 {% load gallery_tags %}
 
+{% block title %}
+  <title>Home Page</title>
+{% endblock title %}
+
 {% block content %}
   <!-- Hero Section Begin -->
   {% get_gallery %}
 
   <!-- Categories Section Begin -->
   <section class="categories spad">
-{#    <div class="container">#}
-{#      <div class="row">#}
-{#        <div class="col-lg-3 col-md-6 col-sm-6">#}
-{#          <div class="categories__item set-bg" data-setbg="img/categories/cat-1.jpg">#}
-{#            <div class="categories__hover__text">#}
-{#              <h5>Dinner</h5>#}
-{#              <p>28 articles</p>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{#        <div class="col-lg-3 col-md-6 col-sm-6">#}
-{#          <div class="categories__item set-bg" data-setbg="img/categories/cat-2.jpg">#}
-{#            <div class="categories__hover__text">#}
-{#              <h5>Dinner</h5>#}
-{#              <p>28 articles</p>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{#        <div class="col-lg-3 col-md-6 col-sm-6">#}
-{#          <div class="categories__item set-bg" data-setbg="img/categories/cat-3.jpg">#}
-{#            <div class="categories__hover__text">#}
-{#              <h5>Dinner</h5>#}
-{#              <p>28 articles</p>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{#        <div class="col-lg-3 col-md-6 col-sm-6">#}
-{#          <div class="categories__item set-bg" data-setbg="img/categories/cat-4.jpg">#}
-{#            <div class="categories__hover__text">#}
-{#              <h5>Dinner</h5>#}
-{#              <p>28 articles</p>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{#      </div>#}
-{#    </div>#}
-    <div class="categories__post">
+      <div class="categories__post">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-8">
             {% for post in post_list %}
-                {% if forloop.first %}
+                {% if forloop.last %}
                   <div class="categories__post__item categories__post__item--large">
                     <div class="categories__post__item__pic set-bg"
                          data-setbg="{{ post.image.url }}">
@@ -64,8 +32,10 @@
                       <h3><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
                       <ul class="post__widget">
                         <li>by <span>{{ post.author }}</span></li>
-                        <li>3 min read</li>
-                        <li>20 Comment</li>
+                        <li>{{ post.comment.count }} Comments</li>
+                        <li>{{ post.views }} Views</li>
+                        <li>{{ post.get_likes_count }} likes</li>
+                        <li>{{ post.get_dislikes_count }} dislikes</li>
                       </ul>
                       <p>{{ post.text|slice:":250" }}</p>
                       <a href="{{ post.get_absolute_url }}" class="primary-btn">Read more</a>
@@ -74,9 +44,10 @@
                   <div class="row">
                 {% endif %}
             {% endfor %}
+
                 <div class="col-lg-6 col-md-6 col-sm-6">
                   {% for post in post_list %}
-                      {% if forloop.counter <= 5 and  forloop.counter > 1 %}
+                      {% if forloop.counter <= 5 and  forloop.counter > 0 %}
                         <div class="categories__post__item">
                           <div class="categories__post__item__pic small__item set-bg"
                                data-setbg="{{ post.image.url }}">
@@ -90,10 +61,9 @@
                             <h3><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
                             <ul class="post__widget">
                               <li>by <span>{{ post.author }}</span></li>
-                              <li>3 min read</li>
-                              <li>20 Comment</li>
+                              <li>{{ post.comment.count }} Comments</li>
                             </ul>
-                            <p>{{ post.text|slice:":250" }}</p>
+                            <p>{{ post.text|truncatewords:20|safe }}</p>
                           </div>
                         </div>
                       {% endif %}
@@ -102,7 +72,7 @@
 
                 <div class="col-lg-6 col-md-6 col-sm-6">
                   {% for post in post_list %}
-                    {% if forloop.counter > 5 %}
+                    {% if forloop.counter > 4 %}
                       <div class="categories__post__item">
                         <div class="categories__post__item__pic small__item set-bg"
                              data-setbg="{{ post.image.url }}">
@@ -116,10 +86,9 @@
                           <h3><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
                           <ul class="post__widget">
                             <li>by <span>{{ post.author }}</span></li>
-                            <li>3 min read</li>
-                            <li>20 Comment</li>
+                            <li>{{ post.comment.count }} Comments</li>
                           </ul>
-                          <p>{{ post.text|slice:":250" }}</p>
+                          <p>{{ post.text|truncatewords:20|safe }}</p>
                         </div>
                       </div>
                     {% endif %}
@@ -128,13 +97,9 @@
               </div>
 
 
-            <div class="col-lg-12 text-center">
-              <div class="load__more__btn">
-                <a href="#">Load more</a>
-              </div>
-            </div>
+            {% include 'include/pagination.html' %}<br>
           </div>
-          {% include 'blog/include/sidebar.html' %}
+          {% include 'include/sidebar.html' %}
         </div>
       </div>
     </div>

@@ -329,14 +329,13 @@ ol {
 	background: #f5f5f5;
 }
 
-.header__hamburger {
+.header__humberger {
 	font-size: 14px;
 	color: #111111;
 	padding: 10px 0 11px;
-
 }
 
-.header__hamburger i {
+.header__humberger i {
 	cursor: pointer;
 }
 
@@ -347,7 +346,7 @@ ol {
 .header__menu ul li {
 	list-style: none;
 	display: inline-block;
-	margin-right: 40px;
+	margin-right: 30px;
 }
 
 .header__menu ul li:last-child {
@@ -365,7 +364,7 @@ ol {
 	transform: scaleX(1);
 }
 
-.header__menu ul li:hover .header__mega_menu__wrapper {
+.header__menu ul li:hover .header__megamenu__wrapper {
 	top: 42px;
 	opacity: 1;
 	visibility: visible;
@@ -396,7 +395,7 @@ ol {
 	position: absolute;
 	left: 0;
 	top: 62px;
-	width: 180px;
+	width: 200px;
 	background: #222222;
 	z-index: 9;
 	text-align: left;
@@ -409,25 +408,26 @@ ol {
 }
 
 .header__menu ul li .children {
-	position: absolute;
+
 	left: 100px;
-	top: 62px;
+	top: 20px;
 	width: 180px;
 	background: #222222;
 	z-index: 9;
 	text-align: left;
+	margin-left: 15px;
 	-webkit-transition: all, 0.3s;
 	-o-transition: all, 0.3s;
 	transition: all, 0.3s;
 	opacity: 0;
 	visibility: hidden;
-	padding: 10px 0;
+
 }
 
 .header__menu ul li:hover .children {
 	opacity: 1;
 	visibility: visible;
-	top: 41px;
+	top: 20px;
 }
 
 .header__menu ul li .dropdown__menu li {
@@ -480,7 +480,7 @@ ol {
 	transform: scaleX(0);
 }
 
-.header__mega_menu__wrapper {
+.header__megamenu__wrapper {
 	position: absolute;
 	left: -175px;
 	right: -176px;
@@ -499,23 +499,23 @@ ol {
 	box-shadow: 0 5px 15px rgba(20, 14, 5, 0.15);
 }
 
-.header__mega_menu {
+.header__megamenu {
 	margin-right: -30px;
 }
 
-.header__mega_menu__item {
+.header__megamenu__item {
 	width: calc(20% - 30px);
 	float: left;
 	margin-right: 30px;
 }
 
-.header__mega_menu__item .header__mega_menu__item--pic {
+.header__megamenu__item .header__megamenu__item--pic {
 	height: 132px;
 	position: relative;
 	margin-bottom: 15px;
 }
 
-.header__mega_menu__item .header__mega_menu__item--pic .label {
+.header__megamenu__item .header__megamenu__item--pic .label {
 	font-size: 12px;
 	color: #111111;
 	font-weight: 700;
@@ -528,11 +528,11 @@ ol {
 	top: 10px;
 }
 
-.header__mega_menu__item .header__mega_menu__item--text {
+.header__megamenu__item .header__megamenu__item--text {
 	text-align: left;
 }
 
-.header__mega_menu__item .header__mega_menu__item--text h5 a {
+.header__megamenu__item .header__megamenu__item--text h5 a {
 	line-height: 20px;
 	color: #111111;
 }
@@ -577,7 +577,7 @@ ol {
 	margin-right: 0;
 }
 
-.hamburger__menu__overlay {
+.humberger__menu__overlay {
 	position: fixed;
 	left: 0;
 	right: 0;
@@ -591,11 +591,11 @@ ol {
 	transition: all 0.5s;
 }
 
-.hamburger__menu__overlay.active {
+.humberger__menu__overlay.active {
 	visibility: visible;
 }
 
-.hamburger__menu__wrapper {
+.humberger__menu__wrapper {
 	width: 400px;
 	background: #111111;
 	position: fixed;
@@ -610,19 +610,16 @@ ol {
 	left: -400px;
 }
 
-.hamburger__menu__wrapper.show__hamburger__menu__wrapper {
+.humberger__menu__wrapper.show__humberger__menu__wrapper {
 	opacity: 1;
 	left: 0;
 }
 
-.hamburger__menu__logo {
+.humberger__menu__logo {
 	margin-bottom: 20px;
 }
-.hamburger__menu__logo a{
-	height: auto;
-}
 
-.hamburger__menu__nav {
+.humberger__menu__nav {
 	display: none;
 }
 
@@ -678,85 +675,85 @@ ol {
 	margin: 2px 0;
 }
 
-.hamburger__menu__title h6 {
+.humberger__menu__title h6 {
 	color: #ffffff !important;
 	opacity: 1 !important;
 }
 
-.hamburger__menu__about {
+.humberger__menu__about {
 	margin-bottom: 50px;
 }
 
-.hamburger__menu__about img {
+.humberger__menu__about img {
 	min-width: 100%;
 	margin-bottom: 20px;
 }
 
-.hamburger__menu__about h6 {
+.humberger__menu__about h6 {
 	color: #ffffff;
 	opacity: 0.5;
 }
 
-.hamburger__menu__about p {
+.humberger__menu__about p {
 	color: #ffffff;
 	opacity: 0.5;
 	margin-bottom: 25px;
 }
 
-.hamburger__menu__about .hamburger__menu__about__social a {
+.humberger__menu__about .humberger__menu__about__social a {
 	background: #363636 !important;
 }
 
-.hamburger__menu__about .hamburger__menu__about__social a:hover {
+.humberger__menu__about .humberger__menu__about__social a:hover {
 	background: #f4952f !important;
 }
 
-.hamburger__menu__about .hamburger__menu__about__social a i {
+.humberger__menu__about .humberger__menu__about__social a i {
 	color: #ffffff;
 	opacity: 0.7;
 }
 
-.hamburger__menu__subscribe .hamburger__menu__title {
+.humberger__menu__subscribe .humberger__menu__title {
 	margin-bottom: 20px !important;
 }
 
-.hamburger__menu__subscribe p {
+.humberger__menu__subscribe p {
 	color: #ffffff;
 	opacity: 0.7;
 }
 
-.hamburger__menu__subscribe form input {
+.humberger__menu__subscribe form input {
 	background: transparent;
 	color: #ffffff !important;
 	opacity: 0.5 !important;
 }
 
-.hamburger__menu__subscribe form input::-webkit-input-placeholder {
+.humberger__menu__subscribe form input::-webkit-input-placeholder {
 	color: #ffffff !important;
 	opacity: 0.5 !important;
 }
 
-.hamburger__menu__subscribe form input::-moz-placeholder {
+.humberger__menu__subscribe form input::-moz-placeholder {
 	color: #ffffff !important;
 	opacity: 0.5 !important;
 }
 
-.hamburger__menu__subscribe form input:-ms-input-placeholder {
+.humberger__menu__subscribe form input:-ms-input-placeholder {
 	color: #ffffff !important;
 	opacity: 0.5 !important;
 }
 
-.hamburger__menu__subscribe form input::-ms-input-placeholder {
+.humberger__menu__subscribe form input::-ms-input-placeholder {
 	color: #ffffff !important;
 	opacity: 0.5 !important;
 }
 
-.hamburger__menu__subscribe form input::placeholder {
+.humberger__menu__subscribe form input::placeholder {
 	color: #ffffff !important;
 	opacity: 0.5 !important;
 }
 
-.hamburger__menu__subscribe form label {
+.humberger__menu__subscribe form label {
 	color: #ffffff !important;
 	opacity: 0.7 !important;
 }
@@ -767,7 +764,8 @@ ol {
 
 .hero__inside__item {
 	position: relative;
-	height: 633px;
+	height: 400px;
+	width: 500px;
 	margin-bottom: 11px;
 	margin-right: 11px;
 }
@@ -1101,8 +1099,11 @@ ol {
 }
 
 .categories__post__item__pic.small__item {
-	height: 253px;
+	width: 100%; /* Ширина */
+	border-radius: 10px;
 }
+
+
 
 .categories__post__item__pic.smaller__large {
 	height: 380px;
@@ -1461,12 +1462,12 @@ ol {
 }
 
 .sidebar__item__title,
-.hamburger__menu__title {
+.humberger__menu__title {
 	margin-bottom: 30px;
 }
 
 .sidebar__item__title h6,
-.hamburger__menu__title h6 {
+.humberger__menu__title h6 {
 	display: inline-block;
 	font-size: 15px;
 	color: #111111;
@@ -1476,7 +1477,7 @@ ol {
 }
 
 .sidebar__item__title h6:after,
-.hamburger__menu__title h6:after {
+.humberger__menu__title h6:after {
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -1492,7 +1493,7 @@ ol {
 }
 
 .sidebar__item__follow__links a,
-.hamburger__menu__about .hamburger__menu__about__social a {
+.humberger__menu__about .humberger__menu__about__social a {
 	display: inline-block;
 	font-size: 16px;
 	color: #111111;
@@ -1509,12 +1510,12 @@ ol {
 }
 
 .sidebar__item__follow__links a:last-child,
-.hamburger__menu__about .hamburger__menu__about__social a:last-child {
+.humberger__menu__about .humberger__menu__about__social a:last-child {
 	margin-right: 0;
 }
 
 .sidebar__item__follow__links a:hover,
-.hamburger__menu__about .hamburger__menu__about__social a:hover {
+.humberger__menu__about .humberger__menu__about__social a:hover {
 	background: #f4952f;
 	color: #ffffff;
 }
@@ -1657,12 +1658,12 @@ ol {
 }
 
 .sidebar__subscribe__item p,
-.hamburger__menu__subscribe p {
+.humberger__menu__subscribe p {
 	font-size: 15px;
 }
 
 .sidebar__subscribe__item form .email-input,
-.hamburger__menu__subscribe form .email-input {
+.humberger__menu__subscribe form .email-input {
 	height: 46px;
 	width: 100%;
 	padding-left: 15px;
@@ -1673,32 +1674,32 @@ ol {
 }
 
 .sidebar__subscribe__item form .email-input::-webkit-input-placeholder,
-.hamburger__menu__subscribe form .email-input::-webkit-input-placeholder {
+.humberger__menu__subscribe form .email-input::-webkit-input-placeholder {
 	color: #888888;
 }
 
 .sidebar__subscribe__item form .email-input::-moz-placeholder,
-.hamburger__menu__subscribe form .email-input::-moz-placeholder {
+.humberger__menu__subscribe form .email-input::-moz-placeholder {
 	color: #888888;
 }
 
 .sidebar__subscribe__item form .email-input:-ms-input-placeholder,
-.hamburger__menu__subscribe form .email-input:-ms-input-placeholder {
+.humberger__menu__subscribe form .email-input:-ms-input-placeholder {
 	color: #888888;
 }
 
 .sidebar__subscribe__item form .email-input::-ms-input-placeholder,
-.hamburger__menu__subscribe form .email-input::-ms-input-placeholder {
+.humberger__menu__subscribe form .email-input::-ms-input-placeholder {
 	color: #888888;
 }
 
 .sidebar__subscribe__item form .email-input::placeholder,
-.hamburger__menu__subscribe form .email-input::placeholder {
+.humberger__menu__subscribe form .email-input::placeholder {
 	color: #888888;
 }
 
 .sidebar__subscribe__item form label,
-.hamburger__menu__subscribe form label {
+.humberger__menu__subscribe form label {
 	position: relative;
 	font-size: 15px;
 	color: #888888;
@@ -1709,7 +1710,7 @@ ol {
 }
 
 .sidebar__subscribe__item form label .checkmark,
-.hamburger__menu__subscribe form label .checkmark {
+.humberger__menu__subscribe form label .checkmark {
 	position: absolute;
 	left: 0;
 	top: 6px;
@@ -1719,14 +1720,14 @@ ol {
 }
 
 .sidebar__subscribe__item form label input,
-.hamburger__menu__subscribe form label input {
+.humberger__menu__subscribe form label input {
 	position: absolute;
 	visibility: hidden;
 	display: none;
 }
 
 .sidebar__subscribe__item form label input:checked~span,
-.hamburger__menu__subscribe form label input:checked~span {
+.humberger__menu__subscribe form label input:checked~span {
 	background: #f4952f;
 	border-color: #f4952f;
 }
@@ -2176,7 +2177,7 @@ ol {
 .single-post__author__profile {
 	padding: 30px;
 	background: #f5f5f5;
-	margin-bottom: 50px;
+	margin-top: 50px;
 }
 
 .single-post__author__profile__pic {
@@ -2262,6 +2263,22 @@ ol {
 .single-post__comment__item__pic img {
 	height: 90px;
 	width: 90px;
+	border-radius: 50%;
+}
+
+.chat__item__pic {
+    padding: 10px 10px 5px 10px;
+    margin-bottom: 5px;
+    border-style: double;
+    border-width: 7px;
+    border-radius: 20px;
+    border-color: #0020C2;
+    background: #5CB3FF;
+}
+
+.chat__item__pic img {
+	height: 70px;
+	width: 60px;
 	border-radius: 50%;
 }
 
@@ -2420,7 +2437,7 @@ ol {
 }
 
 .footer__text {
-	padding: 50px 0;
+	padding: 10px 0;
 	text-align: center;
 }
 
@@ -2564,8 +2581,10 @@ ol {
   Contact
 -----------------------*/
 .contact_icon {
-	max-width: 5%;
+	max-width: 30px; //ширина
+    max-height: 30px; //высота
 }
+
 .contact {
 	padding-top: 0;
 }
@@ -3062,12 +3081,12 @@ ol {
 	.single-post__recipe__details__option ul li {
 		margin-right: 8px;
 	}
-	.header__menu ul li:hover .header__mega_menu__wrapper {
+	.header__menu ul li:hover .header__megamenu__wrapper {
 		top: 42px;
 		opacity: 1;
 		visibility: visible;
 	}
-	.header__mega_menu__wrapper {
+	.header__megamenu__wrapper {
 		max-width: 950px;
 	}
 	.signin {
@@ -3083,7 +3102,7 @@ ol {
 /* Tablet Device = 768px */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-	.header__mega_menu__wrapper {
+	.header__megamenu__wrapper {
 		max-width: 730px;
 	}
 	.header__menu ul li {
@@ -3093,7 +3112,7 @@ ol {
 		height: 330px;
 	}
 	.sidebar__item__follow__links a,
-	.hamburger__menu__about .hamburger__menu__about__social a {
+	.humberger__menu__about .humberger__menu__about__social a {
 		margin-bottom: 10px;
 	}
 	.single-post__recipe__details__option ul li {
@@ -3150,7 +3169,7 @@ ol {
 	.header__menu {
 		display: none;
 	}
-	.header__hamburger {
+	.header__humberger {
 		text-align: center;
 		padding: 10px 0 5px;
 	}
@@ -3215,7 +3234,7 @@ ol {
 /* Small Device = 320px */
 
 @media only screen and (max-width: 479px) {
-	.hamburger__menu__wrapper {
+	.humberger__menu__wrapper {
 		width: 300px;
 		padding: 50px 30px 60px 30px;
 	}
@@ -3224,7 +3243,7 @@ ol {
 		margin-bottom: 10px;
 	}
 	.sidebar__item__follow__links a,
-	.hamburger__menu__about .hamburger__menu__about__social a {
+	.humberger__menu__about .humberger__menu__about__social a {
 		margin-bottom: 10px;
 	}
 	.load__more__btn a {
@@ -3287,4 +3306,31 @@ ol {
 		font-size: 100px;
 		line-height: 100px;
 	}
+}
+
+.profile {
+    width: 500px;
+    height: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.profileImage {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.button-acc {
+    background-color: blue; /* Green */
+    border: none;
+    color: yellow;
+    padding: 10px 24px;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }

@@ -1,6 +1,6 @@
 /*  ---------------------------------------------------
-    Template Name: Food_blog
-    Description:  Food_blog Blog HTML Template
+    Template Name: Foodeiblog
+    Description:  Foodeiblog Blog HTML Template
     Author: Colorlib
     Author URI: https://colorlib.com
     Version: 1.0
@@ -23,19 +23,19 @@
         Background Set
     --------------------*/
     $('.set-bg').each(function () {
-        const bg = $(this).data('setbg');
+        var bg = $(this).data('setbg');
         $(this).css('background-image', 'url(' + bg + ')');
     });
 
-    //Hamburger Menu
-    $(".hamburger__open").on('click', function () {
-        $(".hamburger__menu__wrapper").addClass("show__hamburger__menu__wrapper");
-        $(".hamburger__menu__overlay").addClass("active");
+    //Humberger Menu
+    $(".humberger__open").on('click', function () {
+        $(".humberger__menu__wrapper").addClass("show__humberger__menu__wrapper");
+        $(".humberger__menu__overlay").addClass("active");
     });
 
-    $(".hamburger__menu__overlay").on('click', function () {
-        $(".hamburger__menu__wrapper").removeClass("show__hamburger__menu__wrapper");
-        $(".hamburger__menu__overlay").removeClass("active");
+    $(".humberger__menu__overlay").on('click', function () {
+        $(".humberger__menu__wrapper").removeClass("show__humberger__menu__wrapper");
+        $(".humberger__menu__overlay").removeClass("active");
     });
 
     //Search Switch
@@ -60,7 +60,7 @@
     /*------------------
         Carousel Slider
     --------------------*/
-    const hero_s = $(".hero__slider");
+    var hero_s = $(".hero__slider");
     hero_s.owlCarousel({
         loop: true,
         margin: 0,

@@ -6,15 +6,17 @@ from .models import Photo, Gallery
 
 @admin.register(Photo)
 class PhotoAdmin(admin.ModelAdmin):
-    list_display = ("name", "create_date", "get_image")
+    list_display = ("id", "name", "create_date", "get_image")
     readonly_fields = ("get_image",)
     prepopulated_fields = {'slug': ('name',)}
 
-    @staticmethod
-    def get_image(obj):
+    def get_image(self, obj):
         return mark_safe(f'<img src={obj.image.url} width="110" height="80"')
 
 
 @admin.register(Gallery)
-class PhotoAdmin(admin.ModelAdmin):
+class GalleryAdmin(admin.ModelAdmin):
     list_display = ("name", "create_date")
+    fields = ('name', 'slug', 'captions', 'images')
+    readonly_fields = ('create_date',)
+    raw_id_fields = ("images",)

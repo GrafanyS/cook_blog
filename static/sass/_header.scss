@@ -5,7 +5,8 @@
     background: #f5f5f5;
 }
 
-.header__hamburger {
+//noinspection ALL
+.header__humberger {
     font-size: 14px;
     color: $heading-color;
     padding: 10px 0 11px;
@@ -31,6 +32,7 @@
 
             &.active {
 
+                //noinspection ALL
                 & > a {
                     color: $primary-color;
 
@@ -50,6 +52,7 @@
                     visibility: visible;
                 }
 
+                //noinspection ALL
                 & > a {
                     color: $primary-color;
 
@@ -72,6 +75,7 @@
 
             }
 
+            //noinspection ALL
             .dropdown__menu {
                 position: absolute;
                 left: 0;
@@ -105,7 +109,8 @@
                     }
                 }
             }
-            
+
+            //noinspection ALL
             a {
                 font-size: 15px;
                 color: $heading-color;
@@ -135,6 +140,7 @@
     }
 }
 
+//noinspection ALL
 .header__megamenu__wrapper {
     position: absolute;
     left: -175px;
@@ -142,8 +148,7 @@
     top: 62px;
     z-index: 9;
     background: $white-color;
-    padding: 30px;
-    padding-bottom: 25px;
+    padding: 30px 30px 25px;
     max-width: 1170px;
     margin: 0 auto;
     opacity: 0;
@@ -153,20 +158,21 @@
     box-shadow: 0 5px 15px rgba(20, 14, 5, 0.15);
 }
 
-.header__mega_menu {
+.header__megamenu {
     margin-right: -30px;
 }
 
-.header__mega_menu__item {
+.header__megamenu__item {
     width: calc(20% - 30px);
     float: left;
     margin-right: 30px;
 
-    .header__mega_menu__item--pic {
+    .header__megamenu__item--pic {
         height: 132px;
         position: relative;
         margin-bottom: 15px;
 
+        //noinspection ALL
         .label {
             font-size: 12px;
             color: $heading-color;
@@ -181,11 +187,12 @@
         }
     }
 
-    .header__mega_menu__item--text {
+    .header__megamenu__item--text {
         text-align: left;
 
         h5 {
-            
+
+            //noinspection ALL
             a {
                 line-height: 20px;
                 color: $heading-color;
@@ -196,6 +203,7 @@
 
 .header__search {
     font-size: 14px;
+    //noinspection SassScssResolvedByNameOnly
     color: $heading-color;
     text-align: right;
     padding: 10px 0 11px;
@@ -222,6 +230,7 @@
     text-align: right;
     padding: 63px 0;
 
+    //noinspection SassScssResolvedByNameOnly
     a {
         font-size: 14px;
         color: $heading-color;
@@ -234,7 +243,7 @@
     }
 }
 
-.hamburger__menu__overlay {
+.humberger__menu__overlay {
     position: fixed;
     left: 0;
     right: 0;
@@ -251,7 +260,8 @@
     }
 }
 
-.hamburger__menu__wrapper {
+//noinspection ALL
+.humberger__menu__wrapper {
     width: 400px;
     background: $heading-color;
     position: fixed;
@@ -264,17 +274,17 @@
     opacity: 0;
     left: -400px;
 
-    &.show__hamburger__menu__wrapper {
+    &.show__humberger__menu__wrapper {
         opacity: 1;
         left: 0;
     }
 }
 
-.hamburger__menu__logo {
+.humberger__menu__logo {
     margin-bottom: 20px;
 }
 
-.hamburger__menu__nav {
+.humberger__menu__nav {
     display: none;
 }
 
@@ -332,7 +342,7 @@
     margin: 2px 0;
 }
 
-.hamburger__menu__title {
+.humberger__menu__title {
 
     @extend .sidebar__item__title;
 
@@ -342,7 +352,7 @@
     }
 }
 
-.hamburger__menu__about {
+.humberger__menu__about {
     margin-bottom: 50px;
 
     img {
@@ -361,16 +371,18 @@
         margin-bottom: 25px;
     }
 
-    .hamburger__menu__about__social {
+    .humberger__menu__about__social {
         @extend .sidebar__item__follow__links;
 
         a {
             background: #363636!important;
 
+            //noinspection ALL
             &:hover {
                 background: $primary-color!important;
             }
 
+            //noinspection ALL
             i {
                 color: $white-color;
                 opacity: .7;
@@ -379,13 +391,14 @@
     }
 }
 
-.hamburger__menu__subscribe {
+.humberger__menu__subscribe {
     @extend .sidebar__subscribe__item;
 
-    .hamburger__menu__title {
+    .humberger__menu__title {
         margin-bottom: 20px!important;
     }
 
+    //noinspection ALL
     p {
         color: $white-color;
         opacity: .7;
@@ -393,6 +406,7 @@
 
     form {
 
+        //noinspection ALL
         input {
             background: transparent;
             color: $white-color!important;
@@ -404,6 +418,7 @@
             }
         }
 
+        //noinspection ALL
         label {
             color: $white-color!important;
             opacity: .7!important;

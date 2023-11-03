@@ -2,13 +2,17 @@
 <html lang="ru">
 {% load static %}
 
+
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Foodei_blog Template">
-  <meta name="keywords" content="Foodei_blog, unica, creative, html">
+  <meta name="description" content="Foodeiblog Template">
+  <meta name="keywords" content="Foodeiblog, unica, creative, html">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Foodei_blog | Template</title>
+    <link rel="shortcut icon" href={% static "img/favicon.ico"%}>
+  {% block title %}
+  <title>Maks Cook Blog</title>
+  {% endblock title %}
 
   <!-- Google Font -->
   <link
@@ -23,45 +27,46 @@
   <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
   <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
   <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+
+  {% block css %}{% endblock %}
 </head>
 
 <body>
-<!-- Page Preloaded -->
-<div id="preloaded">
-  <div class="loader"></div>
-</div>
 
-<!--  Begin -->
-{% include 'blog/include/left_nav.html' %}
-<!-- Hamburger End -->
+<!-- Humberger Begin -->
+{% include 'include/left_nav.html' %}
+<!-- Humberger End -->
 
 <!-- Header Section Begin -->
-{% include 'header.html' %}
+{% include 'include/header.html' %}
 <!-- Header Section End -->
 
 {% block content %}
 
 {% endblock content %}
 
-{% include 'footer.html' %}
+{% include 'include/footer.html' %}
 
 <!-- Search Begin -->
 <div class="search-model">
   <div class="h-100 d-flex align-items-center justify-content-center">
     <div class="search-close-switch">+</div>
     <form class="search-model-form">
-        <label for="search-input"></label><input type="text" id="search-input" placeholder="Search here.....">
+      <input type="text" id="search-input" placeholder="Search here.....">
     </form>
   </div>
 </div>
 <!-- Search End -->
 
 <!-- Js Plugins -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/jquery.slicknav.js' %}"></script>
 <script src="{% static 'js/owl.carousel.min.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
+{% block scripts %}
+{% endblock %}
 </body>
 
 </html>

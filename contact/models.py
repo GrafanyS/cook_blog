@@ -3,31 +3,52 @@ from django.db import models
 
 
 class ContactModel(models.Model):
-    """ Класс модели обратной связи"""
-    name = models.CharField(max_length=50)
-    email = models.EmailField()
-    website = models.URLField(blank=True, null=True)
-    message = models.TextField(max_length=5000)
-    create_at = models.DateTimeField(auto_now_add=True)
+    """Модель обратной связи"""
+
+    class Meta:
+        verbose_name = 'Обратная связь'
+        verbose_name_plural = 'Обратная связь'
+        ordering = ['-create_at']
+
+    name = models.CharField(max_length=50, verbose_name='Name')
+    email = models.EmailField(verbose_name='Email')
+    website = models.URLField(blank=True, null=True, verbose_name='Site')
+    message = models.TextField(max_length=5000, verbose_name='Message')
+    create_at = models.DateTimeField(auto_now_add=True, verbose_name='Create_at')
 
     def __str__(self):
         return f'{self.name} - {self.email}'
 
 
 class ContactLink(models.Model):
-    """ Класс модели контактов """
-    icon = models.FileField(upload_to="icons/")
-    name = models.CharField(max_length=200)
+    """Модель контактов"""
+
+    class Meta:
+        verbose_name = 'Контактные данные'
+        verbose_name_plural = 'Контактные данные'
+        ordering = ['-id']
+
+    icon = models.FileField(upload_to='icons/', verbose_name='Иконка')
+    name = models.CharField(
+        max_length=200,
+        verbose_name='Информация для пользователей (номер, почта и тд.)'
+    )
 
     def __str__(self):
-        return self.name
+        return f'{self.name}'
 
 
 class About(models.Model):
-    """ Класс модели страницы о нас """
-    name = models.CharField(max_length=50, default='')
-    text = RichTextField()
-    mini_text = RichTextField()
+    """Модель страницы о нас"""
+
+    class Meta:
+        verbose_name = 'Страница "О нас"'
+        verbose_name_plural = 'Страница "О нас"'
+        ordering = ['-id']
+
+    name = models.CharField(max_length=50, default='', verbose_name='Наименование')
+    text = RichTextField(verbose_name='Текст страницы "О нас"')
+    mini_text = RichTextField(verbose_name='Коротенький текст для предпросмотра')
 
     def get_first_image(self):
         item = self.about_images.first()
@@ -38,14 +59,34 @@ class About(models.Model):
 
 
 class ImageAbout(models.Model):
-    """ Класс модели изображений страницы о нас """
-    image = models.ImageField(upload_to="about/")
-    page = models.ForeignKey(About, on_delete=models.CASCADE, related_name="about_images")
-    alt = models.CharField(max_length=100)
+    """Модель изображений для страницы о нас"""
+
+    class Meta:
+        verbose_name = 'Изображения для страницы "О нас"'
+        verbose_name_plural = 'Изображения для страницы "О нас"'
+        ordering = ['-id']
+
+    image = models.ImageField(upload_to='about/', verbose_name='Изображение')
+    page = models.ForeignKey(
+        About,
+        on_delete=models.CASCADE,
+        related_name='about_images',
+        verbose_name='Для страницы "О нас"'
+    )
+    alt = models.CharField(max_length=100, verbose_name='Текст, если картинка не загрузится')
 
 
 class Social(models.Model):
-    """ Класс модели соц сетей страницы о нас """
-    icon = models.FileField(upload_to="icons/")
-    name = models.CharField(max_length=200)
-    link = models.URLField()
+    """Модель социальных ссылок"""
+
+    class Meta:
+        verbose_name = 'Социальные ссылки'
+        verbose_name_plural = 'Социальные ссылки'
+        ordering = ['-id']
+
+    icon = models.FileField(upload_to='icons/', verbose_name='Иконка')
+    name = models.CharField(max_length=200, verbose_name='Наименование социальной ссылки')
+    link = models.URLField(verbose_name='Ссылка')
+
+    def __str__(self):
+        return f'{self.name}'
