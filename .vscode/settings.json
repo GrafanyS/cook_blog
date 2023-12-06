@@ -1,3 +1,4 @@
 {
-    "docwriter.language": "Russian"
+    "docwriter.language": "Russian",
+    "docwriter.style": "Auto-detect"
 }
